@@ -109,8 +109,27 @@ body::before{
   height:100vh;
 }
 
-.page{ display:none; }
-.active{ display:block; }
+.page{
+  display:none;
+}
+
+.page.active{
+  display:block;
+}
+
+.centerPage.active{
+  display:flex;
+}
+
+.centerPage{
+  min-height:100vh;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+  box-sizing:border-box;
+  text-align:center;
+}
 
 h1,h2{ font-family:'Pacifico',cursive; }
 
@@ -313,7 +332,7 @@ canvas{
 <canvas id="sparkles"></canvas>
 
 <!-- PAGE 1 -->
-<div id="home" class="page active">
+<div id="home" class="page active centerPage">
 <h1>💝 Ada kejutan untuk Mama 💝</h1>
 <h2>Mau lihat? 👀✨</h2>
 <h3>🎁⸜(｡˃ ᵕ ˂｡)⸝🎁</h3>
@@ -325,13 +344,13 @@ canvas{
 </div>
 
 <!-- NO -->
-<div id="noPage" class="page">
+<div id="noPage" class="page centerPage">
 <h1>⚠️ Error terdeteksi</h1>
 <p>Silakan coba lagi</p>
 <button onclick="goHome()">Coba Lagi</button>
 </div>
 
-<div id="achievementPage" class="page">
+<div id="achievementPage" class="page centerPage">
   <h1>Selamat atas Pencapaian Barunya 🎉</h1>
 
   <div class="achievementPhotos">
@@ -343,7 +362,7 @@ canvas{
 </div>
 
 <!-- CAKE -->
-<div id="cakePage" class="page">
+<div id="cakePage" class="page centerPage">
 <h1>Make A Wish 🎂</h1>
 
 <div id="cakeContainer">
