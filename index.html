@@ -277,8 +277,14 @@ html, body{
   justify-content:center;
   align-items:center;
   gap:12px;
-  margin:20px;
-  flex-wrap:wrap; /* mobile friendly */
+  margin:20px auto;
+}
+
+.achievementPhotos img{
+  width:42%;
+  max-width:220px;
+  border-radius:14px;
+  box-shadow:0 6px 12px rgba(0,0,0,0.2);
 }
 
 .achievementPhotos img{
@@ -418,7 +424,7 @@ canvas{
 function checkPassword(){
   const input = document.getElementById("pw").value;
 
-  if(input === "Mama1965"){ // change this
+  if(input === "1965"){ // change this
     document.getElementById("lockScreen").style.display = "none";
   } else {
     alert("Password Salah 🥺");
